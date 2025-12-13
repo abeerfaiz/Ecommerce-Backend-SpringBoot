@@ -5,7 +5,7 @@ import com.ecommerce.project.payload.product.ProductDTO;
 import com.ecommerce.project.payload.product.ProductResponse;
 
 public interface ProductService {
-    ProductDTO addProduct(Product product, Long categoryId);
+    ProductDTO addProduct(ProductDTO productDTO, Long categoryId);
 
     ProductResponse getAllProducts();
 
@@ -13,7 +13,7 @@ public interface ProductService {
 
     ProductResponse searchProductsByKeyword(String keyword);
 
-    ProductDTO updateProduct(Product product, Long productId);
+    ProductDTO updateProduct(ProductDTO productDTO, Long productId);
 
     ProductDTO deleteProduct(Long productId);
 }
