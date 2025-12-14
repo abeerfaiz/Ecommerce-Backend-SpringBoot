@@ -115,7 +115,7 @@ public class ProductServiceImpl implements ProductService {
         Product productFromDb = productRepository.findById(productId)
                 .orElseThrow(() -> new ResourceNotFoundException("Product", "productId", productId));
 
-        String path = "/images";
+        String path = "images";
         String fileName = uploadImage(path, image);
 
         productFromDb.setImage(fileName);
